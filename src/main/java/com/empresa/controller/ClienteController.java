@@ -15,7 +15,9 @@ import com.empresa.entity.Cliente;
 import com.empresa.service.ClienteService;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.apachecommons.CommonsLog;
 
+@CommonsLog
 @RestController
 @RequestMapping("/rest/cliente")
 @Tag(name = "Cliente", description = "Operaciones sobre cliente")
@@ -26,7 +28,13 @@ public class ClienteController {
 	
 	@GetMapping("/porDni/{filtro}")
 	public ResponseEntity<List<Cliente>> listaClientesPorDni(@PathVariable("filtro") String parametro){
+		log.info(">>> listaClientesPorDni [ini] : " + parametro);
+		log.error(">>> listaClientesPorDni [ini] : " + parametro);
+		log.debug(">>> listaClientesPorDni [ini] : " + parametro);
 		List<Cliente> lista = service.listaClientesPorDni(parametro);
+		log.info(">>> listaClientesPorDni [fin] : " + lista.size());	
+		log.error(">>> listaClientesPorDni [fin] : " + lista.size());
+		log.debug(">>> listaClientesPorDni [fin] : " + lista.size());
 		return ResponseEntity.ok(lista);
 	}
 	
