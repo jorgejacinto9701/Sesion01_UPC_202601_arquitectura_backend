@@ -19,11 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.empresa.entity.Alumno;
 import com.empresa.service.AlumnoService;
 
-import io.swagger.v3.oas.annotations.tags.Tag;
-
 @RestController
 @RequestMapping("/rest/alumno")
-@Tag(name = "Alumnos", description = "Operaciones sobre alumnos")
 public class AlumnoController {
 
 	@Autowired

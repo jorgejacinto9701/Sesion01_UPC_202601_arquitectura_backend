@@ -13,11 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.empresa.entity.Empleado;
 import com.empresa.service.EmpleadoService;
 
-import io.swagger.v3.oas.annotations.tags.Tag;
-
 @RestController
 @RequestMapping("/rest/empleado")
-@Tag(name = "Empleado", description = "Operaciones sobre cliente")
 public class EmpleadoController {
 
 	@Autowired

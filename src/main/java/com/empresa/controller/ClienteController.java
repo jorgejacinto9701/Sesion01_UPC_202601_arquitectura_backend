@@ -14,13 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.empresa.entity.Cliente;
 import com.empresa.service.ClienteService;
 
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.apachecommons.CommonsLog;
 
 @CommonsLog
 @RestController
 @RequestMapping("/rest/cliente")
-@Tag(name = "Cliente", description = "Operaciones sobre cliente")
 public class ClienteController {
 
 	@Autowired
